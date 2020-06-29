@@ -1,0 +1,130 @@
+{% extends "layout.html" %} {% block main %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+
+  <h4><br /></h4>
+</head>
+<!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">Optical Character Regconition Vietnamese</a>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/classifier">Import Form</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Search"
+        aria-label="Fuck"
+      />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav> -->
+<div class="title">
+  <h1>OCR   ID</h1>
+</div>
+
+<div class="container">
+  <form action="/id" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <form runat="server">
+        <input
+          type="file"
+          accept="image/*"
+          id="image"
+          name="image"
+          value="Choose File"
+          multiple
+          onchange="upload()"
+        />
+      </form>
+      <br />
+
+      <img id="preview" style="width: 75%;height: 75%;" /><br />
+      <br />
+      <br />
+      <button type="reset" class="btn btn-primary">
+        <i class="fa fa-eraser"></i> Clear
+      </button>
+      <button type="submit" class="btn btn-info">
+        <i class="fa fa-database"></i> Submit
+      </button>
+    </div>
+  </form>
+  <br>
+  <div class="model">
+    <div class="alert alert-success" role="alert">
+      <h3>MODEL KNN</h3>
+      <!-- <p class="currency">Currency:</p> -->
+      <!-- <div>{{raw_text}}</div> -->
+      <!-- <br /> -->
+      <p class="alert-heading">Predict ID:</p>
+      <div class ='color_output'>
+        {{ID2}}
+      </div>
+      <br />
+    </div>
+  </div>
+  <div class="model">
+    <div class="alert alert-success" role="alert">
+      <h3>MODEL SVM</h3>
+      <!-- <p class="currency">Currency:</p> -->
+      <!-- <div>{{raw_text}}</div> -->
+      <!-- <br /> -->
+      <p class="alert-heading">Predict ID:</p>
+      <div>
+        <div class ='color_output'>{{ID3}}</div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <div class="model">
+    <div class="alert alert-success" role="alert">
+      <h3>MODEL CNN</h3>
+      <!-- <p class="currency">Currency:</p> -->
+      <!-- <div>{{raw_text}}</div> -->
+      <!-- <br /> -->
+      <p class="alert-heading">Predict ID:</p>
+      <div class ='color_output'>
+        {{ID1}}
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+<footer class="small text-center text-muted">
+  Made by Trực, Phúc, Tâm, Trung <a href="#">Contact</a>
+</footer>  
+<br />
+<script>
+  var x;
+  function upload() {
+    var file = document.getElementById("image").files;
+    console.log("file", file);
+    if (file.length > 0) {
+      var fileReader = new FileReader();
+      fileReader.onload = function (event) {
+        document
+          .getElementById("preview")
+          .setAttribute("src", event.target.result);
+      };
+    }
+    fileReader.readAsDataURL(file[0]);
+    x = file[0].name;
+    return x;
+  }
+  console.log((x = upload()));
+</script>
+<footer class="small text-center text-muted"></footer>
+{% endblock %}
