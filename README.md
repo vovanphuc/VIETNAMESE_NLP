@@ -41,7 +41,9 @@
 
 # Liên Hệ :
 Mình giới hạn dung lượng của github nên mình không thể upload toàn bộ các model của bài toán, các bạn cần có thể liên hệ mình :
+
 Facebook : https://www.facebook.com/VoVanPhucc
+
 Skype : vovovanphuc100598
 
 # Tài liệu tham khảo :
