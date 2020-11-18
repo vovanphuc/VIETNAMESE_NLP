@@ -83,7 +83,7 @@ netifaces==0.10.4
 networkx==2.4
 nltk==3.4.5
 nose==1.3.7
-notebook==6.0.3
+notebook==6.1.5
 npm==0.1.1
 numpy==1.18.5
 oauth==1.0.1
