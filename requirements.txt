@@ -25,7 +25,7 @@ defer==1.0.6
 defusedxml==0.6.0
 distlib==0.3.0
 distro-info===0.18ubuntu0.18.04.1
-Django==2.2.4
+Django==2.2.18
 docutils==0.15.2
 editdistance==0.5.3
 entrypoints==0.3
