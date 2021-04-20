@@ -103,7 +103,7 @@ prompt-toolkit==3.0.5
 protobuf==3.11.3
 psutil==5.4.2
 ptyprocess==0.6.0
-py==1.5.2
+py==1.10.0
 pycairo==1.16.2
 pycrypto==2.6.1
 pycups==1.9.73
