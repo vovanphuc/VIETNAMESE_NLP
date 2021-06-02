@@ -181,7 +181,7 @@ unity-scope-virtualbox==0.1
 unity-scope-yelp==0.1
 unity-scope-zotero==0.1
 unity-tweak-tool==0.0.7
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==20.0.18
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
